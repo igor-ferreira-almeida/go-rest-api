@@ -24,6 +24,7 @@ func New(service service.VideoService) VideoController {
 func (c *controller) FindAll() []entity.Video {
 	return c.service.FindAll()
 }
+
 func (c *controller) Save(context *gin.Context) entity.Video {
 	var video entity.Video
 	context.BindJSON(&video)
